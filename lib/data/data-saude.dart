@@ -5,18 +5,18 @@ class DataSaude {
     ModelSaude(
         icone: 'assets/icons/burn.png',
         valor: "305",
-        titulo: "Calories burned"),
+        titulo: "Calorias perdidas"),
     ModelSaude(
         icone: 'assets/icons/steps.png',
          valor: "10,983", 
-         titulo: "Steps"),
+         titulo: "Passos"),
     ModelSaude(
         icone: 'assets/icons/distance.png', 
         valor: "7km", 
-        titulo: "Distance"),
+        titulo: "Distância"),
     ModelSaude(
         icone: 'assets/icons/sleep.png', 
         valor: "7h48m", 
-        titulo: "Sleep"),
+        titulo: "Sono"),
   ];
 }

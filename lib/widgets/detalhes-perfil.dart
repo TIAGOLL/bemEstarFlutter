@@ -12,8 +12,8 @@ class DetalhesPerfil extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           buildDetails('Passos', '10983'),
-          buildDetails('Distancia', '7km'),
-          buildDetails('Dormiu', '7hr'),
+          buildDetails('Distância', '7km'),
+          buildDetails('Sono', '7hr'),
         ],
       ),
     );
