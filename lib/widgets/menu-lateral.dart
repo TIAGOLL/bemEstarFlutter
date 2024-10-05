@@ -1,20 +1,20 @@
-import 'package:fitness_dashboard_ui/const/constant.dart';
-import 'package:fitness_dashboard_ui/data/side_menu_data.dart';
+import 'package:bem_estar_flutter/const/constant.dart';
+import 'package:bem_estar_flutter/data/data-menu-lateral.dart';
 import 'package:flutter/material.dart';
 
-class SideMenuWidget extends StatefulWidget {
-  const SideMenuWidget({super.key});
+class MenuLateral extends StatefulWidget {
+  const MenuLateral({super.key});
 
   @override
-  State<SideMenuWidget> createState() => _SideMenuWidgetState();
+  State<MenuLateral> createState() => _MenuLateralState();
 }
 
-class _SideMenuWidgetState extends State<SideMenuWidget> {
+class _MenuLateralState extends State<MenuLateral> {
   int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    final data = SideMenuData();
+    final data = MenuLateralData();
 
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 20),
@@ -26,7 +26,7 @@ class _SideMenuWidgetState extends State<SideMenuWidget> {
     );
   }
 
-  Widget buildMenuEntry(SideMenuData data, int index) {
+  Widget buildMenuEntry(MenuLateralData data, int index) {
     final isSelected = selectedIndex == index;
 
     return Container(
@@ -46,12 +46,12 @@ class _SideMenuWidgetState extends State<SideMenuWidget> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 7),
               child: Icon(
-                data.menu[index].icon,
+                data.menu[index].icone,
                 color: isSelected ? Colors.black : Colors.grey,
               ),
             ),
             Text(
-              data.menu[index].title,
+              data.menu[index].titulo,
               style: TextStyle(
                 fontSize: 16,
                 color: isSelected ? Colors.black : Colors.grey,

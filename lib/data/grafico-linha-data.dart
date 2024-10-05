@@ -1,6 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 
-class LineData {
+class GraficoLinhaData {
   final spots = const [
     FlSpot(1.68, 21.04),
     FlSpot(2.84, 26.23),
@@ -57,9 +57,9 @@ class LineData {
   };
   final bottomTitle = {
     0: 'Jan',
-    10: 'Feb',
+    10: 'Fev',
     20: 'Mar',
-    30: 'Apr',
+    30: 'A',
     40: 'May',
     50: 'Jun',
     60: 'Jul',

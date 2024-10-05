@@ -1,17 +1,17 @@
-import 'package:fitness_dashboard_ui/data/health_details.dart';
-import 'package:fitness_dashboard_ui/util/responsive.dart';
-import 'package:fitness_dashboard_ui/widgets/custom_card_widget.dart';
+import 'package:bem_estar_flutter/data/data-saude.dart';
+import 'package:bem_estar_flutter/util/responsive.dart';
+import 'package:bem_estar_flutter/widgets/custom-card-widget.dart';
 import 'package:flutter/material.dart';
 
-class ActivityDetailsCard extends StatelessWidget {
-  const ActivityDetailsCard({super.key});
+class AtividadesWidget extends StatelessWidget {
+  const AtividadesWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final healthDetails = HealthDetails();
+    final detalheSaude = DataSaude();
 
     return GridView.builder(
-      itemCount: healthDetails.healthData.length,
+      itemCount: detalheSaude.saudeData.length,
       shrinkWrap: true,
       physics: const ScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -25,14 +25,14 @@ class ActivityDetailsCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(
-              healthDetails.healthData[index].icon,
+              detalheSaude.saudeData[index].icone,
               width: 30,
               height: 30,
             ),
             Padding(
               padding: const EdgeInsets.only(top: 15, bottom: 4),
               child: Text(
-                healthDetails.healthData[index].value,
+                detalheSaude.saudeData[index].valor,
                 style: const TextStyle(
                   fontSize: 18,
                   color: Colors.white,
@@ -41,7 +41,7 @@ class ActivityDetailsCard extends StatelessWidget {
               ),
             ),
             Text(
-              healthDetails.healthData[index].title,
+              detalheSaude.saudeData[index].titulo,
               style: const TextStyle(
                 fontSize: 13,
                 color: Colors.grey,

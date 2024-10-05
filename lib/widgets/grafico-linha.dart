@@ -1,22 +1,22 @@
-import 'package:fitness_dashboard_ui/const/constant.dart';
-import 'package:fitness_dashboard_ui/data/line_chart_data.dart';
-import 'package:fitness_dashboard_ui/widgets/custom_card_widget.dart';
+import 'package:bem_estar_flutter/const/constant.dart';
+import 'package:bem_estar_flutter/data/grafico-linha-data.dart';
+import 'package:bem_estar_flutter/widgets/custom-card-widget.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class LineChartCard extends StatelessWidget {
-  const LineChartCard({super.key});
+class GraficoLinhaCard extends StatelessWidget {
+  const GraficoLinhaCard({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final data = LineData();
+    final data = GraficoLinhaData();
 
     return CustomCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Steps Overview",
+            "Passos",
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
           ),
           const SizedBox(height: 20),

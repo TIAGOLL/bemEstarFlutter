@@ -1,5 +1,5 @@
-import 'package:fitness_dashboard_ui/const/constant.dart';
-import 'package:fitness_dashboard_ui/data/pie_chart_data.dart';
+import 'package:bem_estar_flutter/const/constant.dart';
+import 'package:bem_estar_flutter/data/grafico-pizza.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +8,7 @@ class Chart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final pieChartData = ChartData();
+    final pieChartData = GraficoPizzaData();
 
     return SizedBox(
       height: 200,

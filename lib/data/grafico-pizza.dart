@@ -1,8 +1,8 @@
-import 'package:fitness_dashboard_ui/const/constant.dart';
+import 'package:bem_estar_flutter/const/constant.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class ChartData {
+class GraficoPizzaData {
   final paiChartSelectionDatas = [
     PieChartSectionData(
       color: primaryColor,

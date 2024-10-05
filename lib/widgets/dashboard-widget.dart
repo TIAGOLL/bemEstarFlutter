@@ -1,9 +1,9 @@
-import 'package:fitness_dashboard_ui/util/responsive.dart';
-import 'package:fitness_dashboard_ui/widgets/activity_details_card.dart';
-import 'package:fitness_dashboard_ui/widgets/bar_graph_widget.dart';
-import 'package:fitness_dashboard_ui/widgets/header_widget.dart';
-import 'package:fitness_dashboard_ui/widgets/line_chart_card.dart';
-import 'package:fitness_dashboard_ui/widgets/summary_widget.dart';
+import 'package:bem_estar_flutter/util/responsive.dart';
+import 'package:bem_estar_flutter/widgets/atividades-widget.dart';
+import 'package:bem_estar_flutter/widgets/grafico-barras.dart';
+import 'package:bem_estar_flutter/widgets/grafico-linha.dart';
+import 'package:bem_estar_flutter/widgets/header-widget.dart';
+import 'package:bem_estar_flutter/widgets/perfil-widget.dart';
 import 'package:flutter/material.dart';
 
 class DashboardWidget extends StatelessWidget {
@@ -19,13 +19,13 @@ class DashboardWidget extends StatelessWidget {
             const SizedBox(height: 18),
             const HeaderWidget(),
             const SizedBox(height: 18),
-            const ActivityDetailsCard(),
+            const AtividadesWidget(),
             const SizedBox(height: 18),
-            const LineChartCard(),
+            const GraficoLinhaCard(),
             const SizedBox(height: 18),
-            const BarGraphCard(),
+            const GraficoBarras(),
             const SizedBox(height: 18),
-            if (Responsive.isTablet(context)) const SummaryWidget(),
+            if (Responsive.isTablet(context)) const PerfilWidget(),
           ],
         ),
       ),

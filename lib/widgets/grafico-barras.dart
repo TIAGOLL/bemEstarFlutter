@@ -1,18 +1,18 @@
-import 'package:fitness_dashboard_ui/data/bar_graph_data.dart';
-import 'package:fitness_dashboard_ui/model/graph_model.dart';
-import 'package:fitness_dashboard_ui/widgets/custom_card_widget.dart';
+import 'package:bem_estar_flutter/data/grafico-barras.dart';
+import 'package:bem_estar_flutter/model/model-grafico.dart';
+import 'package:bem_estar_flutter/widgets/custom-card-widget.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class BarGraphCard extends StatelessWidget {
-  const BarGraphCard({super.key});
+class GraficoBarras extends StatelessWidget {
+  const GraficoBarras({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final barGraphData = BarGraphData();
+    final graficoBarra = GraficoBarra();
 
     return GridView.builder(
-      itemCount: barGraphData.data.length,
+      itemCount: graficoBarra.data.length,
       shrinkWrap: true,
       physics: const ScrollPhysics(),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -30,7 +30,7 @@ class BarGraphCard extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  barGraphData.data[index].label,
+                  graficoBarra.data[index].titulo,
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
@@ -42,8 +42,8 @@ class BarGraphCard extends StatelessWidget {
                 child: BarChart(
                   BarChartData(
                     barGroups: _chartGroups(
-                      points: barGraphData.data[index].graph,
-                      color: barGraphData.data[index].color,
+                      points: graficoBarra.data[index].grafico,
+                      color: graficoBarra.data[index].cor,
                     ),
                     borderData: FlBorderData(border: const Border()),
                     gridData: FlGridData(show: false),
@@ -55,7 +55,7 @@ class BarGraphCard extends StatelessWidget {
                             return Padding(
                               padding: const EdgeInsets.only(top: 5),
                               child: Text(
-                                barGraphData.label[value.toInt()],
+                                graficoBarra.titulo[value.toInt()],
                                 style: const TextStyle(
                                     fontSize: 11,
                                     color: Colors.grey,
@@ -86,7 +86,7 @@ class BarGraphCard extends StatelessWidget {
   }
 
   List<BarChartGroupData> _chartGroups(
-      {required List<GraphModel> points, required Color color}) {
+      {required List<ModelGrafico> points, required Color color}) {
     return points
         .map((point) => BarChartGroupData(x: point.x.toInt(), barRods: [
               BarChartRodData(

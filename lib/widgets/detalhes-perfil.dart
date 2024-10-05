@@ -1,8 +1,8 @@
-import 'package:fitness_dashboard_ui/widgets/custom_card_widget.dart';
+import 'package:bem_estar_flutter/widgets/custom-card-widget.dart';
 import 'package:flutter/material.dart';
 
-class SummaryDetails extends StatelessWidget {
-  const SummaryDetails({super.key});
+class DetalhesPerfil extends StatelessWidget {
+  const DetalhesPerfil({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +11,9 @@ class SummaryDetails extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          buildDetails('Cal', '305'),
-          buildDetails('Steps', '10983'),
-          buildDetails('Distance', '7km'),
-          buildDetails('Sleep', '7hr'),
+          buildDetails('Passos', '10983'),
+          buildDetails('Distancia', '7km'),
+          buildDetails('Dormiu', '7hr'),
         ],
       ),
     );

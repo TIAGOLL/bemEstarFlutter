@@ -1,7 +1,7 @@
-import 'package:fitness_dashboard_ui/util/responsive.dart';
-import 'package:fitness_dashboard_ui/widgets/dashboard_widget.dart';
-import 'package:fitness_dashboard_ui/widgets/side_menu_widget.dart';
-import 'package:fitness_dashboard_ui/widgets/summary_widget.dart';
+import 'package:bem_estar_flutter/util/responsive.dart';
+import 'package:bem_estar_flutter/widgets/dashboard-widget.dart';
+import 'package:bem_estar_flutter/widgets/menu-lateral.dart';
+import 'package:bem_estar_flutter/widgets/perfil-widget.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
@@ -15,13 +15,13 @@ class MainScreen extends StatelessWidget {
       drawer: !isDesktop
           ? const SizedBox(
               width: 250,
-              child: SideMenuWidget(),
+              child: MenuLateral(),
             )
           : null,
       endDrawer: Responsive.isMobile(context)
           ? SizedBox(
               width: MediaQuery.of(context).size.width * 0.8,
-              child: const SummaryWidget(),
+              child: const PerfilWidget(),
             )
           : null,
       body: SafeArea(
@@ -31,7 +31,7 @@ class MainScreen extends StatelessWidget {
               Expanded(
                 flex: 2,
                 child: SizedBox(
-                  child: SideMenuWidget(),
+                  child: MenuLateral(),
                 ),
               ),
             Expanded(
@@ -41,7 +41,7 @@ class MainScreen extends StatelessWidget {
             if (isDesktop)
               Expanded(
                 flex: 3,
-                child: SummaryWidget(),
+                child: PerfilWidget(),
               ),
           ],
         ),

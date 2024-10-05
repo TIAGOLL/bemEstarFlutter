@@ -1,5 +1,5 @@
-import 'package:fitness_dashboard_ui/const/constant.dart';
-import 'package:fitness_dashboard_ui/screens/main_screen.dart';
+import 'package:bem_estar_flutter/const/constant.dart';
+import 'package:bem_estar_flutter/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

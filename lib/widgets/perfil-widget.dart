@@ -1,11 +1,11 @@
-import 'package:fitness_dashboard_ui/const/constant.dart';
-import 'package:fitness_dashboard_ui/widgets/pie_chart_widget.dart';
-import 'package:fitness_dashboard_ui/widgets/scheduled_widget.dart';
-import 'package:fitness_dashboard_ui/widgets/summary_details.dart';
+import 'package:bem_estar_flutter/const/constant.dart';
+import 'package:bem_estar_flutter/widgets/grafico-pizza.dart';
+import 'package:bem_estar_flutter/widgets/agenda-widget.dart';
+import 'package:bem_estar_flutter/widgets/detalhes-perfil.dart';
 import 'package:flutter/material.dart';
 
-class SummaryWidget extends StatelessWidget {
-  const SummaryWidget({super.key});
+class PerfilWidget extends StatelessWidget {
+  const PerfilWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +20,13 @@ class SummaryWidget extends StatelessWidget {
             SizedBox(height: 20),
             Chart(),
             Text(
-              'Summary',
+              'Perfil',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
             ),
             SizedBox(height: 16),
-            SummaryDetails(),
+            DetalhesPerfil(),
             SizedBox(height: 40),
-            Scheduled(),
+            Agenda(),
           ],
         ),
       ),
